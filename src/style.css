@@ -1,0 +1,172 @@
+.body {
+  padding: 10px;
+  margin: 0;
+  background-color: #DDDDDD;
+
+  /* Full height */
+  height: 100%;
+}
+
+
+.main-container {
+  display: grid;
+  grid-template-columns: 10px 50px 1fr 1fr;
+  grid-template-rows: 50px 1fr 1fr 1fr;
+  min-height: 95vh;
+  background-color: #DDDDDD;
+  border: .05em;
+}
+
+.add-container {
+  display: grid;
+  grid-column-start: 2;
+  border-radius: 50%;
+  cursor: pointer;
+
+  box-shadow:
+    -10px -10px 10px 0 rgba(255, 255, 255, .5),
+    12px 12px 12px 0 rgba(0, 0, 0, .06);
+}
+
+.dolist-container {
+  display: grid;
+  grid-area: 2 / 2 / 5 / 5;
+  margin: 20px 20px 0 20px;
+  border-radius: 1em;
+  box-shadow:
+    inset -10px -10px 10px 0 rgba(255, 255, 255, .5),
+    inset 12px 12px 12px 0 rgba(0, 0, 0, .06);
+}
+
+
+.footer-container {
+  display: grid;
+}
+
+.floating-main-card {
+  background-color: rgb(240 210 217);
+  border-radius: 4px;
+  margin: 20px 20px 10px 30px; 
+  height: 100px;
+  width: 500px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.6);
+  color: #444;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.floating-main-card:hover { 
+  transform: scale(1.1);
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.6);
+ 
+}
+/*Float card content and progress bar*/
+.progressbar { 
+  counter-reset: step;
+}
+.progressbar li { 
+  list-style-type: none;
+  float: left;
+  width: 33.3%;
+  position: relative;
+  text-align: center;
+}
+.progressbar li:before{ 
+  content: counter(step);
+  counter-increment: step;
+  line-height: 20px;
+  width: 20px;
+  height: 20px;
+  margin: 0 auto 10px auto;
+  border: 1px solid rgb(0, 0, 0);
+  display: block;
+  text-align: center;
+  border-radius: 50%;
+  background-color: rgb(240 210 217);
+}
+.progressbar li:after { 
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: rgba(0, 0, 0);
+  top: 10px;
+  left: -50%;
+  z-index: -1;
+}
+.progressbar li:first-child::after { 
+  content: none;
+}
+
+/*modal css*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  display: grid;
+  margin: 10% auto;
+  width: 60%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
+}
+
+.modal-header h2,
+.modal-footer h3 {
+  margin: 0;
+}
+
+.modal-header {
+  background: var(--modal-color);
+  padding: 15px;
+  color: #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.modal-body {
+  padding: 10px 20px;
+  background: #fff;
+}
+
+.modal-footer {
+  background: var(--modal-color);
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.close {
+  color: #ccc;
+  float: right;
+  font-size: 30px;
+  color: #fff;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

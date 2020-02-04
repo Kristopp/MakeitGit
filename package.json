@@ -1,0 +1,33 @@
+{
+  "name": "list",
+  "version": "1.0.0",
+  "description": "doit-list",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d lib",
+    "dev": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kristopp/doit.git"
+  },
+  "author": "Palu69",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kristopp/doit/issues"
+  },
+  "homepage": "https://github.com/Kristopp/doit#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.8.3",
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.15"
+  }
+}
