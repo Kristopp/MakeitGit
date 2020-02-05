@@ -1,20 +1,16 @@
 import {
     html
 } from './Layout/base'
-console.log('hello')
+console.log(html)
 //Global state
 const state = {}
-/*add-controls*/
+/*open close modal*/
 function openModal() {
     html.modal.style.display = "block"
-    console.log('click')
 }
 
 function closeModal() {
     html.modal.style.display = "none"
-    console.log(html)
 }
 html.addItem.addEventListener('click', openModal)
 html.closeModal.addEventListener('click', closeModal)
-//Function to open modal
-//Clode modal
