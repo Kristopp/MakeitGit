@@ -7,4 +7,3 @@ export let html = {
     activeProgressBar: document.querySelector('active'),
     
 }
-console.log(html.activeProgressBar)
