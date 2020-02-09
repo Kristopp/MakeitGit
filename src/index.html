@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="style.css">
-  <script type="text/javascript" src="/dist/js/main.js" async></script>
 </head>
 
 <body class="body">
@@ -20,9 +19,9 @@
     <div class="dolist-container">
       <div class="floating-main-card">
         <span class="card-text-name">Mission name</span>
-        <div class="steps-container">
-          <ul class="progressbar">
-            <li class="active">
+        <div class="steps-container" id="card-steps">
+          <ul class="progressbar" id="progressbar">
+            <li class="active" id="active">
               go!</li>
             <li>step</li>
             <li>step</li>
@@ -42,11 +41,11 @@
         <div class="modal-body">
           <p>Here u asign ur new mission u want to complite</p>
           <div>
-            Whats next? <input type="text"> use steps?<input type="checkbox">
-            <div class="steps-container"> steps<input type="text"></div>
-
+            Whats next? <input type="text" id="input-text">
+            <div class="steps-container"> steps<input id="number-steps" type="number"></div>
           </div>
         </div>
+        <button class="go-button" id="go-button">go</button>
         <div class="modal-footer">
           <h3>Modal Footer</h3>
         </div>
@@ -55,4 +54,5 @@
   </div>
   <div class="footer-container">
   </div>
+  <script type="text/javascript" src="/alpha/true.js"></script>
 </body>
