@@ -7,7 +7,7 @@ export let html = {
     activeProgressBar: document.getElementById('active'),
     goButton: document.getElementById('go-button'),
     addName: document.getElementById('input-text'),
-    addSteps: document.getElementById('number-steps')
-    
+    addSteps: document.getElementById('number-steps'),
+    doListContainer: document.getElementById('dolist-container')
 }
 console.log(html.goButton)

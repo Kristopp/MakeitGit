@@ -4,7 +4,8 @@
   "description": "doit-list",
   "private": true,
   "scripts": {
-    "build": "babel src -d lib",
+    "build": "webpack",
+    "start:dev": "webpack-dev-server",
     "start": "webpack --config webpack.config.js"
   },
   "repository": {
