@@ -8,6 +8,7 @@ export let html = {
     goButton: document.getElementById('go-button'),
     addName: document.getElementById('input-text'),
     addSteps: document.getElementById('number-steps'),
-    doListContainer: document.getElementById('dolist-container')
+    doListContainer: document.getElementById('dolist-container'),
+    stepNumber: document.getElementById('active')
+
 }
-console.log(html.goButton)

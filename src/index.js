@@ -6,15 +6,18 @@ import * as newCard from './Layout/newCard'
 
 //Global state
 export const state = [];
+const liMarkUp = `<li>step</li> `
 
 const addNewMission = () => { 
     //Get values 
-    const stepValue = inputValues.getStepcount();
+    const stepValue = inputValues.getStepCount();
+    
     if(inputValues.getInputName(),stepValue >= 1 || stepValue < 5) { 
         //Create new card and close modal
         let mission = new Mission(inputValues.getInputName(), stepValue);
         state.push(mission);
         html.modal.style.display = "none";
+        newCard.newCardMarkUp();
         //inputValues.clearInput();
     } else { 
         console.log('error')
@@ -23,10 +26,10 @@ const addNewMission = () => {
     
     //dynamic progressBar
     //loop through object to get input values
-    newCard.newCardMarkUp(); 
+    console.log(html.stepNumber)
     
-    console.log(state)
 }
+
 /*open close modal*/
 function openModal() {
     html.modal.style.display = "block"
