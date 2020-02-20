@@ -1,34 +1,38 @@
 import "./style.css";
-import { html } from './Layout/base';
+import {
+    html
+} from './Layout/base';
 import Mission from './Module/newDoTo';
 import * as inputValues from './Layout/inputValues';
-import * as newCard from './Layout/newCard'
+
 
 //Global state
-export const state = [];
-const liMarkUp = `<li>step</li> `
+const state = [];
 
-const addNewMission = () => { 
+
+const addNewMission = () => {
     //Get values 
     const stepValue = inputValues.getStepCount();
-    
-    if(inputValues.getInputName(),stepValue >= 1 || stepValue < 5) { 
-        //Create new card and close modal
-        let mission = new Mission(inputValues.getInputName(), stepValue);
-        state.push(mission);
-        html.modal.style.display = "none";
-        newCard.newCardMarkUp();
-        //inputValues.clearInput();
-    } else { 
+
+    //Create new card
+    let mission = new Mission(inputValues.getInputName(), stepValue);
+    mission.newCardHtml()
+    state.push(mission);
+    html.modal.style.display = "none";
+    //create progress bar           
+    if (inputValues.getInputName(), stepValue >= 1 || stepValue < 5) {
+        for (let i = 1; i < stepValue; i++) {
+            mission.liElement();
+        }
+    } else {
         console.log('error')
     }
-    //extract stepscount 
-    
-    //dynamic progressBar
-    //loop through object to get input values
-    console.log(html.stepNumber)
+}
+const compliteStep = () => { 
+    //change progressbar color when step complited
     
 }
+
 
 /*open close modal*/
 function openModal() {
@@ -40,4 +44,5 @@ function closeModal() {
 }
 html.addItem.addEventListener('click', openModal);
 html.closeModal.addEventListener('click', closeModal);
-html.goButton.addEventListener('click',addNewMission);
+html.goButton.addEventListener('click', addNewMission);
+html.
