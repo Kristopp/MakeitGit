@@ -30,6 +30,9 @@
     "webpack-dev-server": "^3.10.1"
   },
   "dependencies": {
-    "lodash": "^4.17.15"
+    "@primer/octicons": "^9.4.0",
+    "lodash": "^4.17.15",
+    "octicons": "^8.5.0",
+    "typicons.font": "^2.0.9"
   }
 }

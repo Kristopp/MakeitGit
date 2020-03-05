@@ -11,16 +11,18 @@ const state = [];
 
 
 const addNewMission = () => {
-    //Get values 
-    const stepValue = inputValues.getStepCount();
 
-    //Create new card
-    let mission = new Mission(inputValues.getInputName(), stepValue);
-    mission.newCardHtml()
-    state.push(mission);
-    html.modal.style.display = "none";
-    //create progress bar           
-    if (inputValues.getInputName(), stepValue >= 1 || stepValue < 5) {
+    const stepValue = inputValues.getStepCount();
+    if (inputValues.getInputName(), stepValue < 6) {
+        //Get values 
+
+        //Create new card
+        let mission = new Mission(inputValues.getInputName(), stepValue);
+        mission.newCardHtml()
+        state.push(mission);
+        html.modal.style.display = "none";
+        //create progress bar           
+
         for (let i = 1; i < stepValue; i++) {
             mission.liElement();
         }
@@ -28,9 +30,9 @@ const addNewMission = () => {
         console.log('error')
     }
 }
-const compliteStep = () => { 
-    //change progressbar color when step complited
-    
+const compliteStep = () => {
+    html.
+    console.log(liElement)
 }
 
 
@@ -45,4 +47,4 @@ function closeModal() {
 html.addItem.addEventListener('click', openModal);
 html.closeModal.addEventListener('click', closeModal);
 html.goButton.addEventListener('click', addNewMission);
-html.
+//document.getElementById(this.id)

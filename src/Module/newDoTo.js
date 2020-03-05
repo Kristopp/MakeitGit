@@ -1,7 +1,9 @@
 import {
   html
 } from '../Layout/base'
+
 export default class Mission {
+
   constructor(newMissionName, stepsCount) {
     this.newMissionName = newMissionName;
     this.stepsCount = stepsCount;
@@ -23,6 +25,7 @@ export default class Mission {
     att.value = "li-element"
     liElement.innerHTML = "step"
     liElement.setAttributeNode(att)
+    //liElement.addEventListener('click', () => document.body.style.color = )
     document.getElementById(this.id).appendChild(liElement);
 
   }

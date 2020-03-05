@@ -9,6 +9,6 @@ export let html = {
     addName: document.getElementById('input-text'),
     addSteps: document.getElementById('number-steps'),
     doListContainer: document.getElementById('dolist-container'),
-    stepNumber: document.getElementById('active')
-
+    stepNumber: document.getElementById('active'),
+    liElement: document.getElementById('li-element'),
 }
