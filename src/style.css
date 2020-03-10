@@ -6,7 +6,7 @@ html {
   background-color: #003554;
 }
 
-.main-container {
+.main-container-landing-page {
   display: inline-grid;
   justify-content: center;
   grid-template-columns: repeat(3, 1fr);
@@ -14,12 +14,12 @@ html {
   width: 100vw;
   height: 100vh;
   grid-template-areas:
-    "hd hd"
-    ". next"
-    ". work"
-    ". com"
-    ". add"
-    "new ."
+    "hd hd hd"
+    "next next next"
+    "work work work"
+    "com com com"
+    "add add add"
+    "new . ."
   ;
 }
 
@@ -28,6 +28,7 @@ html {
 }
 
 .next-in-line {
+  margin: 0 10px 0 10px;
   grid-area: next;
   display: flex;
   justify-content: center;
@@ -42,8 +43,18 @@ html {
   justify-content: center;
   align-items: center;
   font-size: 3em;
+  margin: 0 10px 0 10px;
 }
-.new-button { 
+.complited-step {
+  grid-area: com;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  margin: 0 10px 0 10px;
+}
+
+.new-button {
   grid-area: new;
   display: flex;
   justify-content: center;
@@ -55,13 +66,7 @@ html {
   bottom: 3.35%;
 
 }
-.complited-step {
-  grid-area: com;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 3em;
-}
+
 
 
 .add-container {

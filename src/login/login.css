@@ -1,0 +1,87 @@
+.body,
+html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-image: url(../../img/login/Slice\ 1.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.main-container-login {
+    display: inline-grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-areas:
+        ". . ."
+        ". . ."
+        
+        ". user ."
+        ". password ."
+        ". register . "
+        ". login ."
+        ". . .";
+    width: 100vw;
+    height: 100vh;
+}
+
+.user-name {
+    grid-area: user;
+    display: flex;
+    margin: 6em 0 0 0.5em;
+    justify-content: center;
+    align-items: center;
+    height: 0px;
+    width: 9.5em;
+    border: 0.03em solid #00A6FB;
+    background-color: #00A6FB;
+    transform: rotate(0.59deg);
+}
+
+.password {
+    grid-area: password;
+    margin: 5em 0 0 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 9.5em;
+    height: 0px;
+    border: 0.04em solid #00A6FB;
+    transform: rotate(-0.01deg);
+}
+
+.login-button {
+    grid-area: login;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-container {
+    grid-area: register;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Jura;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 50px;
+    letter-spacing: 0.6em;
+    margin-bottom: auto;
+    padding-left: 0.7em;
+
+    color: #00A6FB;
+}
+
+.go-button {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    left: 0px;
+    top: 0px;
+
+}
