@@ -1,101 +1,164 @@
-.body {
-  padding: 10px;
+.body,
+html {
+  padding: 0;
   margin: 0;
-  background-color: #DDDDDD;
+  box-sizing: border-box;
+  background-color: #003554;
+}
 
-  /* Full height */
-  height: 100%;
+.main-container-landing-page {
+  display: inline-grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  width: 100vw;
+  height: 100vh;
+  grid-template-areas:
+    "hd hd hd"
+    "next next next"
+    "work work work"
+    "com com com"
+    "add add add"
+    "new . ."
+  ;
+}
+
+.header-container {
+  grid-area: hd;
+}
+
+.next-in-line {
+  margin: 0 10px 0 10px;
+  grid-area: next;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+
+}
+
+.workinprogress {
+  grid-area: work;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  margin: 0 10px 0 10px;
+}
+.complited-step {
+  grid-area: com;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  margin: 0 10px 0 10px;
+}
+
+.new-button {
+  grid-area: new;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 3.38%;
+  right: 68.6%;
+  top: 91.49%;
+  bottom: 3.35%;
+
 }
 
 
-.main-container {
-  display: grid;
-  grid-template-columns: 10px 50px 1fr 1fr;
-  grid-template-rows: 50px 1fr 1fr 1fr;
-  min-height: 95vh;
-  background-color: #DDDDDD;
-  border: .05em;
-}
 
 .add-container {
-  display: grid;
-  grid-column-start: 2;
-  border-radius: 50%;
-  cursor: pointer;
+  grid: add;
+  position: absolute;
+  left: 39.13%;
+  right: 40.34%;
+  top: 87.28%;
+  bottom: 3.24%;
 
-  box-shadow:
-    -10px -10px 10px 0 rgba(255, 255, 255, .5),
-    12px 12px 12px 0 rgba(0, 0, 0, .06);
 }
 
-.dolist-container {
-  display: grid;
-  grid-area: 2 / 2 / 5 / 5;
-  margin: 20px 20px 0 20px;
-  border-radius: 1em;
-  box-shadow:
-    inset -10px -10px 10px 0 rgba(255, 255, 255, .5),
-    inset 12px 12px 12px 0 rgba(0, 0, 0, .06);
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
 }
 
 
-.footer-container {
-  display: grid;
+.new-mission {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 .floating-main-card {
-  background-color: rgb(240 210 217);
+  background-image: #048BA8;
   border-radius: 4px;
-  margin: 20px 20px 10px 30px; 
+  margin: 20px 20px 10px 30px;
   height: 100px;
   width: 500px;
   padding: 20px;
-  border-radius: 20px;
-  box-shadow: 5px 5px 5px rgba(0,0,0,0.6);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
   color: #444;
-  cursor: pointer;
-  transition: 0.5s ease;
+  z-index: 1;
 }
-.floating-main-card:hover { 
-  transform: scale(1.1);
-  box-shadow: 5px 5px 10px rgba(0,0,0,0.6);
- 
+
+.floating-main-card:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+
 }
+
 /*Float card content and progress bar*/
-.progressbar { 
+.progressbar {
   counter-reset: step;
 }
-.progressbar li { 
+
+.progressbar li {
   list-style-type: none;
   float: left;
-  width: 33.3%;
+  width: 20%;
   position: relative;
   text-align: center;
 }
-.progressbar li:before{ 
+
+.progressbar li:before {
   content: counter(step);
   counter-increment: step;
   line-height: 20px;
   width: 20px;
   height: 20px;
   margin: 0 auto 10px auto;
-  border: 1px solid rgb(0, 0, 0);
+  border: 2px solid rgb(255, 255, 255);
   display: block;
   text-align: center;
   border-radius: 50%;
-  background-color: rgb(240 210 217);
+  background-color: white;
+  z-index: -1;
 }
-.progressbar li:after { 
+
+.progressbar li:after {
   content: '';
+  position: absolute;
   width: 100%;
   height: 2px;
-  background-color: rgba(0, 0, 0);
+  background-color: rgb(255, 255, 255);
   top: 10px;
   left: -50%;
   z-index: -1;
 }
-.progressbar li:first-child::after { 
+
+.progressbar li:first-child::after {
   content: none;
+}
+
+/* .progressbar li.active { 
+  color: rgb(68, 223, 107);
+} */
+.progressbar li.active:before {
+  background-color: linear-gradient(#56ab2f → #a8e063);
+
 }
 
 /*modal css*/
