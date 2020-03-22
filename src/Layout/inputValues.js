@@ -6,3 +6,4 @@ export const getStepCount = () => html.addSteps.value;
 export const clearInput = () => { 
     html.getInputName.value = '';
 }
+

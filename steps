@@ -1,7 +1,16 @@
-*nputs -> add dynamic steps
-*steps 
+
 complite steps go green* will change
 motivation quote 
 hide complited cards
-
+mission-containers { 
+    use css for showing them
+}
 add custom backgrounds
+/*Login screen*/
+userName input 
+password input 
+register button{ 
+    register screen and functions
+}
+
+confirme button 
