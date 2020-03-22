@@ -1,50 +1,60 @@
 import "./style.css";
 import {
-    html
-} from './Layout/base';
-import Mission from './Module/newDoTo';
-import * as inputValues from './Layout/inputValues';
-
+    loginElements
+} from "../src/login/login-base/baseLogin"
+import {
+    registerElements
+} from "../src/login/login-base/baseLogin"
 
 //Global state
-const state = [];
+window.addEventListener('DOMContentLoaded', (event) => {
+    const state = [];
+    /** dynamic clear input field*/
 
+    /*register functions*/
+    const openRegister = () => {
+        let mainCont = loginElements.mainContainer;
+        let x = loginElements.openRegister;
+        if (x.style.display === "none") {
+            x.style.display = "inline-grid";
+            mainCont.style.display = "none ";
 
-const addNewMission = () => {
-
-    const stepValue = inputValues.getStepCount();
-    if (inputValues.getInputName(), stepValue < 6) {
-        //Get values 
-
-        //Create new card
-        let mission = new Mission(inputValues.getInputName(), stepValue);
-        mission.newCardHtml()
-        state.push(mission);
-        html.modal.style.display = "none";
-        //create progress bar           
-
-        for (let i = 1; i < stepValue; i++) {
-            mission.liElement();
+        } else {
+            mainCont.style.display = "inline-grid";
+            x.style.display = "none";
         }
-    } else {
-        console.log('error')
     }
-}
-const compliteStep = () => {
-    html.
-    console.log(liElement)
-}
+    /* clear register input fields on click*/
+    const clearInputRegister = (myTextField) => {
 
+        //Let's Catch Default Value
+		//We will get Default value just to not clear user's data
 
-/*open close modal*/
-function openModal() {
-    html.modal.style.display = "block"
-}
+        let default_value = myTextField.defaultValue;
+        //Let's clear default value from input field. 
+		//We will catch input field by its ID name.
+        let current_value = myTextField.value;
 
-function closeModal() {
-    html.modal.style.display = "none"
-}
-html.addItem.addEventListener('click', openModal);
-html.closeModal.addEventListener('click', closeModal);
-html.goButton.addEventListener('click', addNewMission);
-//document.getElementById(this.id)
+        //if field is empty put back original data. Works for blur
+        if(current_value == "") {
+			myTextField.value = default_value;
+			return;
+		}
+        if(current_value == default_value) {
+			myTextField.value = '';
+			return false;
+        }
+    }
+    window.clearInput = clearInputRegister;
+    /* login page functions */
+    const logIn = () => {
+        console.log("hello")
+    }
+    /* login screen buttons*/
+    loginElements.loginButton.addEventListener('click', logIn);
+    loginElements.register.addEventListener('click', openRegister)
+    
+    /* register screen buttons */
+    registerElements.userNameRegister.addEventListener('click', clearInputRegister);
+    console.log('DOM fully loaded and parsed');
+});

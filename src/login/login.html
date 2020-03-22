@@ -11,21 +11,41 @@
 </head>
 
 <body class="body">
-    <div class="main-container-login">
-        <div class="user-name">
+    <div class="main-container-login" id="main-container">
+        <div class="user-name" id="user-name">
+            <input type="text" id="username-input" value="username"onclick="window.clearInput(this)" onblur="window.clearInput(this)">
+            <div class="line-username" id="userName-line"></div>
         </div>
-        <div class="password">
+        <div class="password" id="password">
+            <input type="text" id="password-input" value="password" onclick="window.clearInput(this)" onblur="window.clearInput(this)">
+            <div class="line-password" id="password-line"></div>
         </div>
-        <div class="register-container">
+        <div class="register" id="register-container">
             register
         </div>
-
-        <div class="login-button">
-            <img src="../../img/login/go-button.svg" alt="login-button">
+        <div class="login-button" id="login-button">
+            <img src="../../img/login/go-button.svg" alt="login-button" id="go">
         </div>
 
     </div>
+    <div class="register-modal" id="id-register-modal">
+        <div class="username-register">
+            <!-- input fields and on click cler-->
+           <input type="text" id="username-input-register" onclick="window.clearInput(this)" onblur="window.clearInput(this)" value="username">
+           <div class="register-username-line" id="register-username-line"></div>
+        </div>
+        <div class="email-register">
+            
+            <input type="email" id="email-input" value="email" onclick="window.clearInput(this)" onblur="window.clearInput(this)">
+            <div class="register-email-line" id="register-email-line"></div>
+        </div>
+        <div class="pasword-register" >
+            <input type="text" id="password-input-register" value="password" onclick="window.clearInput(this)" onblur="window.clearInput(this)">
+            <div class="register-password-line" id="register-password-line"></div>
+        </div>
 
+    </div>
+    <script type="text/javascript" src="/alpha/true.js"></script>
 </body>
 
 </html>
