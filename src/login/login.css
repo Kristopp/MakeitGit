@@ -3,7 +3,7 @@ html {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background-image: url(../../img/login/Slice\ 1.svg);
+    background-image: url(../../img/login/background-img.svg);
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -126,32 +126,39 @@ html {
         ". userRegister ."
         ". emailRegister ."
         ". pwRegister . "
+        ". submit ."
         ". . .";
-    width: 100vw;
-    height: 100vh;
-}
-
-.go-button {
-    position: absolute;
-    width: 75px;
-    height: 75px;
-    left: 0px;
-    top: 0px;
-}
-
-/*register inputs*/
-.username-register {
-    grid-area: userRegister;
-}
-
-.email-register {
-    grid-area: emailRegister;
-}
-
-.pasword-register {
-    grid-area: pwRegister;
-}
-
+        width: 100vw;
+        height: 100vh;
+    }
+    
+    .go-button {
+        position: absolute;
+        width: 75px;
+        height: 75px;
+        left: 0px;
+        top: 0px;
+    }
+    
+    /*register inputs*/
+    .username-register {
+        grid-area: userRegister;
+    }
+    
+    .email-register {
+        grid-area: emailRegister;
+    }
+    
+    .pasword-register {
+        grid-area: pwRegister;
+    }
+    
+    .submit-button { 
+        grid-area: submit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 .register-username-line {
     margin: 0.25em 0 0 0.5em;
     display: flex;

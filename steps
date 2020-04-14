@@ -9,8 +9,11 @@ add custom backgrounds
 /*Login screen*/
 userName input 
 password input 
-register button{ 
+register button { 
     register screen and functions
+    enter
+    forgot password 
+    help
 }
 
 confirme button 
