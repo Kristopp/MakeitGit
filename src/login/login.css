@@ -29,62 +29,66 @@ html {
 }
 
 /* user and pw input*/
-#username-input,
+.user-name {
+    grid-area: user;
+    margin: 2em 0 0 3em;
+}
+
+#username-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: none;
+    color: #00A6FB;
+    font-family: Jura;
+    font-style: normal;
+    font-weight: 550;
+    font-size: 20px;
+    letter-spacing: 0.4em;
+    padding-left: 1em;
+    cursor: text;
+    outline: none;
+}
+
+
+#username-line {
+    margin: 0.3em 0.5em 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12em;
+    height: 0px;
+    border: 0.04em solid #00A6FB;
+}
+
+.password {
+    grid-area: password;
+    margin: 2em 0 0 2em;
+}
 #password-input {
     background: transparent;
     border: none;
     color: #00A6FB;
     font-family: Jura;
     font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
+    font-weight: 550;
+    font-size: 20px;
     letter-spacing: 0.6em;
     margin-bottom: auto;
-    padding-left: 0.7em;
+    padding-left: 1em;
     cursor: text;
+    outline: none;
 
 }
 
-.user-name {
-    grid-area: user;
-    margin: 6em 0 0 0.5em;
-    border-width: 0px;
-    border: none;
-}
-
-.user-name {
-    cursor: pointer;
-    text-shadow: 0px 0px 30px #00A6FB;
-    transition: all 0.2s ease-out;
-    -moz-transition: all 0.2s ease-in;
-    -o-transition: all 0.2s ease-in;
-    -webkit-transition: all 0.2s ease-in;
-    transition: all 0.2s ease-in;
-}
-
-.line-username {
-    display: flex;
-    margin: 0.25em;
-    justify-content: center;
-    align-items: center;
-    height: 0px;
-    width: 11em;
-    border: 0.03em solid #00A6FB;
-    background-color: #00A6FB;
-}
-
-.password {
-    grid-area: password;
-    margin: 3em 0 0 0.5em;
-}
 
 #password-line {
-    margin: 0.25em 0 0 0.5em;
+    margin: 0.3em 1em 0 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 11em;
-    height: 0px;
+    width: 14em;
     border: 0.04em solid #00A6FB;
 
 }
@@ -104,10 +108,10 @@ html {
     align-items: center;
     font-family: Jura;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 550;
     font-size: 18px;
     line-height: 50px;
-    letter-spacing: 0.6em;
+    letter-spacing: 0.3em;
     padding-left: 0.1em;
     border-width: 0px;
     border: none;
@@ -127,38 +131,41 @@ html {
         ". emailRegister ."
         ". pwRegister . "
         ". submit ."
-        ". . .";
-        width: 100vw;
-        height: 100vh;
-    }
-    
-    .go-button {
-        position: absolute;
-        width: 75px;
-        height: 75px;
-        left: 0px;
-        top: 0px;
-    }
-    
-    /*register inputs*/
-    .username-register {
-        grid-area: userRegister;
-    }
-    
-    .email-register {
-        grid-area: emailRegister;
-    }
-    
-    .pasword-register {
-        grid-area: pwRegister;
-    }
-    
-    .submit-button { 
-        grid-area: submit;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+        ". back .";
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/*register inputs*/
+.username-register {
+    grid-area: userRegister;
+}
+
+.email-register {
+    grid-area: emailRegister;
+}
+
+.pasword-register {
+    grid-area: pwRegister;
+}
+
+.submit-button {
+    grid-area: submit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-button {
+    grid-area: back;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1em 2em 6em;
+
+}
+
 .register-username-line {
     margin: 0.25em 0 0 0.5em;
     display: flex;
@@ -204,21 +211,4 @@ html {
     margin-bottom: auto;
     padding-left: 0.7em;
     cursor: text;
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(0.95);
-        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
-    }
-
-    70% {
-        transform: scale(1);
-        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
-    }
-
-    100% {
-        transform: scale(0.95);
-        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-    }
 }

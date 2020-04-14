@@ -7,14 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Jura" />
-    <title>3-steps-login</title>
+    <title>3steps</title>
 </head>
 
-<body class="body">
+<body class="body" id="login-page">
     <div class="main-container-login" id="main-container">
         <div class="user-name" id="user-name">
-            <input type="text" id="username-input" value="username"onclick="window.clearInput(this)" onblur="window.clearInput(this)">
-            <div class="line-username" id="userName-line"></div>
+            <input type="text" id="username-input" value="username" onclick="window.clearInput(this)" onblur="window.clearInput(this)">
+            <div class="line-username" id="username-line"></div>
         </div>
         <div class="password" id="password">
             <input type="text" id="password-input" value="password" onclick="window.clearInput(this)" onblur="window.clearInput(this)">
@@ -24,7 +24,7 @@
             register
         </div>
         <div class="login-button" id="login-button">
-            <img src="../../img/login/login-button.svg" alt="login-button" id="go">
+            <img src="../../img/login/login-button.svg" alt="login-button" id="login">
         </div>
 
     </div>
@@ -34,7 +34,7 @@
            <input type="text" id="username-input-register" onclick="window.clearInput(this)" onblur="window.clearInput(this)" value="username">
            <div class="register-username-line" id="register-username-line"></div>
         </div>
-        <div class="email-register">
+        <div class="email-register" id="">
             
             <input type="email" id="email-input" value="email" onclick="window.clearInput(this)" onblur="window.clearInput(this)">
             <div class="register-email-line" id="register-email-line"></div>
@@ -43,12 +43,16 @@
             <input type="text" id="password-input-register" value="password" onclick="window.clearInput(this)" onblur="window.clearInput(this)">
             <div class="register-password-line" id="register-password-line"></div>
         </div>
-        <div class="submit-button">
-            <img src="../../img/login/submit.svg" alt="">
-
+        <div class="submit-button" id="register-submit-button">
+            <img src="../../img/login/submit.svg" alt="submit-button-register">
         </div>
-
+        
+        <div class="back-button" id="register-back-button">
+        <img src="../../img/login/back-button-regiser.svg" alt="back-button-register">
+        
+        </div>
     </div>
+    <script></script>
     <script type="text/javascript" src="/alpha/true.js"></script>
 </body>
 
