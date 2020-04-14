@@ -13,7 +13,9 @@ export let registerElements = {
     /*object for register element nodes  */
     userNameRegister: document.getElementById("username-input-register"),
     emailRegister: document.getElementById("email-input"),
-    registerPassword: document.getElementById("password-input-register")
+    registerPassword: document.getElementById("password-input-register"),
+    regSubmitButton: document.getElementById("register-submit-button"),
+    registerBackButton: document.getElementById("register-back-button")
 }
 
 console.log(loginElements)
