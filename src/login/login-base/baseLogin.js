@@ -6,6 +6,7 @@ export let loginElements = {
     passWord: document.getElementById("password-input"),
     register:document.getElementById("register-container"),
     openRegister: document.getElementById("id-register-modal"),
+    forgotPW: document.getElementById("forget-pw"),
     loginButton: document.getElementById("login-button"),
 
 } 
